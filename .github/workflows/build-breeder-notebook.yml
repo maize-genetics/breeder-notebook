@@ -22,6 +22,5 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: "{{defaultContext}}:breeder-notebook"
           push: true
           tags: maizegenetics/breeder-notebook:latest
