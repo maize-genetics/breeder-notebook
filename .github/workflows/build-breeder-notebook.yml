@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - 'main'
-    paths:
-      - 'breeder-notebook/**'
   workflow_dispatch:
 
 jobs:
