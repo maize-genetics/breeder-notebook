@@ -12,6 +12,11 @@ Software developed by members of the [Buckler Lab](https://maizegenetics.net):
 * The [Practical Haplotype Graph](https://www.maizegenetics.net/phg)
 * [rTASSEL](https://rtassel.maizegenetics.net/) and [rPHG](https://rphg.maizegenetics.net/)
 
+### Innovation Lab for Crop Improvement
+Software developed by members of the [Feed the Future Innovation Lab for Crop Improvement](https://ilci.cornell.edu/):
+* [BrAPI](https://brapi.org/) Helper JupyterLab extension that provides GUI for managing database connections to breeding management systems (e.g. [BMS](https://integratedbreeding.net/), [BreedBase](https://breedbase.org/), [GIGWA](https://gigwa.southgreen.fr/gigwa/))
+* Templates (using [JupyterLab Templates](https://github.com/finos/jupyterlab_templates)) providing instruction on common bioinformatics and data science pipelines for breeders
+
 ### Common Bioinformatics Tools
 * [minimap2](https://github.com/lh3/minimap2)
 * [samtools & bcftools](http://www.htslib.org/)
