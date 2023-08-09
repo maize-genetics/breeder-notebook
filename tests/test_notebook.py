@@ -1,5 +1,6 @@
 # Copyright (c) Jupyter Development Team.
 # Distributed under the terms of the Modified BSD License.
+# Modifications copyright (c) Buckler Lab
 import requests
 from tests.conftest import TrackedContainer, find_free_port
 

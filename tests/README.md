@@ -1,0 +1,1 @@
+Test code based on [Jupyter Docker Stacks cookiecutter](https://github.com/jupyter/cookiecutter-docker-stacks), see [`LICENSE.md`](./LICENSE.md) for details.

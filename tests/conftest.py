@@ -1,5 +1,6 @@
 # Copyright (c) Jupyter Development Team.
 # Distributed under the terms of the Modified BSD License.
+# Modifications copyright (c) Buckler Lab
 import logging
 import socket
 from contextlib import closing
@@ -42,7 +43,7 @@ def docker_client() -> docker.DockerClient:
 @pytest.fixture(scope="session")
 def image_name() -> str:
     """Image name to test"""
-    return "my-project/my-jupyter-stack"
+    return "maizegenetics/breeder-notebook:latest"
 
 
 class TrackedContainer:
