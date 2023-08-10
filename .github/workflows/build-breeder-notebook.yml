@@ -4,9 +4,6 @@ env:
   IMAGE_NAME: maizegenetics/breeder-notebook
 
 on:
-  push:
-    branches:
-      - 'main'
   workflow_dispatch:
 
 jobs:
