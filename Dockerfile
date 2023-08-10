@@ -66,10 +66,10 @@ RUN cd /home/${NB_USER}                                                       &&
     rm napb_demo_data.tar.gz
 
 # ILCI Templates
-RUN cd /home/${NB_USER}                                             && \
-    wget https://napb2023.maizegenetics.net/files/templates.tar.gz  && \
-    tar -xvf templates.tar.gz                                       && \
-    rm templates.tar.gz
+RUN mkdir /home/${NB_USER}/templates                                                     && \
+    cd /tmp                                                                              && \
+    git clone https://github.com/agostof/ILCI-NotebookTemplates                          && \
+    mv ILCI-NotebookTemplates/src/templates/*_rTASSEL_*.ipynb /home/${NB_USER}/templates
 
 # Jupyter Notebook config
 ADD jupyter_notebook_config.py /home/${NB_USER}/.jupyter/jupyter_notebook_config.py
