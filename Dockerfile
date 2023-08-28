@@ -52,7 +52,10 @@ RUN Rscript /tmp/libraries.R
 
 # Additional pip installs
 # NOTE: JupyterHub package version must match deployed Hub version
-RUN pip install --no-cache-dir jupyterhub==4.0.1
+# NOTE: Scheduler depends on Pydantic 1.x
+RUN pip install --no-cache-dir jupyterhub==4.0.1 \
+    jupyter_scheduler                            \
+    pydantic==1.10
 
 # Pull BrAPI Helper package from NAPB workshop file server and install it
 RUN cd /tmp && wget https://demo.hub.maizegenetics.net/files/brapi_helper_installer.run && chmod +x brapi_helper_installer.run && ./brapi_helper_installer.run
