@@ -55,13 +55,13 @@ RUN Rscript /tmp/libraries.R
 RUN pip install --no-cache-dir jupyterhub==4.0.1
 
 # Pull BrAPI Helper package from NAPB workshop file server and install it
-RUN cd /tmp && wget https://napb2023.maizegenetics.net/files/brapi_helper_installer.run && chmod +x brapi_helper_installer.run && ./brapi_helper_installer.run
+RUN cd /tmp && wget https://demo.hub.maizegenetics.net/files/brapi_helper_installer.run && chmod +x brapi_helper_installer.run && ./brapi_helper_installer.run
 
 # Pull Brandon's demo files
 RUN cd /home/${NB_USER}                                                       && \
-    wget https://napb2023.maizegenetics.net/files/napb_2023_bgh_demo_01.ipynb && \
-    wget https://napb2023.maizegenetics.net/files/napb_2023_bgh_demo_02.ipynb && \
-    wget https://napb2023.maizegenetics.net/files/napb_demo_data.tar.gz       && \
+    wget https://demo.hub.maizegenetics.net/files/napb_2023_bgh_demo_01.ipynb && \
+    wget https://demo.hub.maizegenetics.net/files/napb_2023_bgh_demo_02.ipynb && \
+    wget https://demo.hub.maizegenetics.net/files/napb_demo_data.tar.gz       && \
     tar -xvf napb_demo_data.tar.gz                                            && \
     rm napb_demo_data.tar.gz
 
