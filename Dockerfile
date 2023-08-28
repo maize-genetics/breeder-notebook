@@ -69,8 +69,7 @@ RUN cd /home/${NB_USER}                                                       &&
     rm napb_demo_data.tar.gz
 
 # ILCI Templates
-RUN mkdir /home/${NB_USER}/templates                                                     && \
-    cd /tmp                                                                              && \
+RUN cd /tmp                                                                              && \
     git clone https://github.com/agostof/ILCI-NotebookTemplates                          && \
     mv ILCI-NotebookTemplates/src/templates/*_rTASSEL_*.ipynb /home/${NB_USER}/templates
 
