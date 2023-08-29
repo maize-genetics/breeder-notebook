@@ -82,5 +82,11 @@ RUN cd /tmp                                                                     
     mv kotlinc /home/${NB_USER}/.kotlinc                                                          && \
     echo "PATH=\$PATH:/home/${NB_USER}/.kotlinc/bin" >> /home/${NB_USER}/.profile
 
+# Install faSize
+RUN mkdir /home/${NB_USER}/.bin                                                                 && \
+    wget -P /home/${NB_USER}/.bin https://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/faSize && \
+    chmod +x /home/${NB_USER}/.bin/faSize                                                       && \
+    echo "PATH=\$PATH:/home/${NB_USER}/.bin" >> /home/${NB_USER}/.profile
+
 # Jupyter Notebook config
 ADD jupyter_notebook_config.py /home/${NB_USER}/.jupyter/jupyter_notebook_config.py
