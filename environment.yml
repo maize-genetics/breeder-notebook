@@ -79,3 +79,4 @@ dependencies:
   # Misc
   - kotlin-jupyter-kernel
   - bioconda::bioconductor-biocversion>=3.17
+  - ucsc-fasize
