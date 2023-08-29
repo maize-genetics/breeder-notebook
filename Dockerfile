@@ -73,5 +73,14 @@ RUN cd /tmp                                                                     
     git clone https://github.com/agostof/ILCI-NotebookTemplates                          && \
     mv ILCI-NotebookTemplates/src/templates/*_rTASSEL_*.ipynb /home/${NB_USER}/templates
 
+# Install Kotlin 1.5 (for PHG)
+RUN cd /tmp                                                                                       && \
+    wget https://github.com/JetBrains/kotlin/releases/download/v1.5.32/kotlin-compiler-1.5.32.zip && \
+    jar xvf kotlin-compiler-1.5.32.zip                                                            && \
+    chmod +x kotlinc/bin/kotlin                                                                   && \
+    chmod +x kotlinc/bin/kotlinc                                                                  && \
+    mv kotlinc /home/${NB_USER}/.kotlinc                                                          && \
+    echo "PATH=\$PATH:/home/${NB_USER}/.kotlinc/bin" >> /home/${NB_USER}/.profile
+
 # Jupyter Notebook config
 ADD jupyter_notebook_config.py /home/${NB_USER}/.jupyter/jupyter_notebook_config.py
